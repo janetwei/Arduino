@@ -1,30 +1,8 @@
-/*
-Sample Code to run the Sparkfun TB6612FNG 1A Dual Motor Driver using Arduino UNO R3
-
-This code conducts a few simple manoeuvres to illustrate the functions:
-  - motorDrive(motorNumber, motorDirection, motorSpeed)
-  - motorBrake(motorNumber)
-  - motorStop(motorNumber)
-  - motorsStandby
-
-Connections:
-- Pin 3 ---> PWMA
-- Pin 8 ---> AIN2
-- Pin 9 ---> AIN1
-- Pin 10 ---> STBY
-- Pin 11 ---> BIN1
-- Pin 12 ---> BIN2
-- Pin 5 ---> PWMB
-
-- Motor 1: A01 and A02
-- Motor 2: B01 and B02
-
-*/
 #include <Encoder.h>
 
 // pin2, pin3 are interrupt pin
-Encoder Enc1(3,4);
-Encoder Enc2(2,6);
+Encoder Enc1(2,4);
+Encoder Enc2(3,7);
 
 long newPosition1;
 long oldPosition1  = -999;
@@ -38,7 +16,7 @@ int pinPWMA = 5; //Speed
 //Motor 2
 int pinBIN1 = 11; //Direction
 int pinBIN2 = 12; //Direction
-int pinPWMB = 7; //Speed
+int pinPWMB = 6; //Speed
 
 //Standby
 int pinSTBY = 10;
