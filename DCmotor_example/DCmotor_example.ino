@@ -26,7 +26,6 @@ Connections:
 Encoder Enc1(3,4);
 Encoder Enc2(2,6);
 
-
 long newPosition1;
 long oldPosition1  = -999;
 

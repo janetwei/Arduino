@@ -24,12 +24,12 @@ Connections:
 //Motor 1
 int pinAIN1 = 9; //Direction 
 int pinAIN2 = 8; //Direction 
-int pinPWMA = 5; //Speed
+int pinPWMA = 3; //Speed
 
 //Motor 2
 int pinBIN1 = 11; //Direction
 int pinBIN2 = 12; //Direction
-int pinPWMB = 7; //Speed
+int pinPWMB = 5; //Speed
 
 //Standby
 int pinSTBY = 10;
