@@ -368,29 +368,6 @@ void motorsStandby()
 }
 
 
-
-void motor_rotate(float loopnumber) {
-  //int rotationspeed;//, loopnumber = 3;
-  long current = oldPosition1;
-  long target = current + (loopnumber * cpr * gearratio);
-  if (loopnumber >= 0){
-    motorDrive(motor1, turnCCW, 255);
-    while (oldPosition1 < target) {
-      read_encoder();
-    }
-    motorBrake(motor1);
-  }
-  else{
-    motorDrive(motor1, turnCW, 255);
-    while (oldPosition1 > target) {
-      read_encoder();
-    }
-    motorBrake(motor1);
-  }
-}
-
-
-
 void read_encoder() {
   newPosition1 = Enc1.read();
   if (newPosition1 != oldPosition1) {
