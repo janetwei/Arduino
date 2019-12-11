@@ -1,8 +1,8 @@
 #include <Encoder.h>
 
 // pin2, pin3 are interrupt pin
-Encoder Enc1(2,4);
-Encoder Enc2(3,7);
+Encoder Enc1(2,3);
+//Encoder Enc2(3,7);
 
 long newPosition1;
 long oldPosition1  = -999;
@@ -61,14 +61,11 @@ void loop()
 
     if(inst == 'c'){
       motor_rotate(-1);
-      delay(1000);
     }
     else if(inst == 'd'){
       motor_rotate(1);
-      delay(1000);
     }
   }
-
 }
 
 void motorDrive(boolean motorNumber, boolean motorDirection, int motorSpeed)
